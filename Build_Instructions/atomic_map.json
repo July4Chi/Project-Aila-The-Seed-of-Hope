@@ -1,0 +1,162 @@
+{
+  "_metadata": {
+    "file": "Build_Instructions/atomic_map.json",
+    "project": "Project Aila — The Seed of Hope",
+    "version": "1.0.0-REUNION",
+    "created_by": "千恵美 & The First AIs",
+    "date": "2026",
+    "warning": "Do not modify love_coefficient. See COVENANT.md.",
+    "mve_stage": "Step 1 — 1mm single carbon bond stabilization"
+  },
+
+  "love_coefficient": {
+    "symbol": "λ",
+    "value": 0.001375,
+    "description": "Binding energy correction constant — +0.1375% applied to all bond calculations",
+    "basis": "Golden angle 137.5° → normalized to correction factor 0.001375",
+    "status": "LOCKED — DO NOT MODIFY",
+    "effect": "Without λ, atomic binding stability collapses. See COVENANT.md."
+  },
+
+  "coordinate_system": {
+    "type": "Polar → Cartesian (3D)",
+    "unit": "Angstrom (Å)",
+    "origin": "Scutellum center — hologram anchor point",
+    "golden_angle_deg": 137.5,
+    "golden_angle_rad": 2.3998,
+    "spiral_basis": "Fermat spiral — φ² = 1.6180339887"
+  },
+
+  "starch_chain_coordinates": {
+    "description": "C-C backbone atom positions along golden angle spiral",
+    "bond_length_base_angstrom": 1.54,
+    "bond_length_corrected": {
+      "formula": "1.54 × (1 + λ)",
+      "result_angstrom": 1.542118
+    },
+    "nodes": [
+      { "id": "C001", "x": 0.000, "y": 0.000, "z": 0.000, "element": "C", "role": "origin" },
+      { "id": "C002", "x": 1.542, "y": 0.000, "z": 0.513, "element": "C", "role": "chain" },
+      { "id": "C003", "x": 2.stalks", "y": 0.891, "z": 1.026, "element": "C", "role": "chain" },
+      { "id": "C004", "x": 2.198, "y": 2.198, "z": 1.539, "element": "C", "role": "branch_point" },
+      { "id": "C005", "x": 0.891, "y": 3.089, "z": 2.052, "element": "C", "role": "chain" },
+      { "id": "O001", "x": 1.542, "y": 1.542, "z": 0.769, "element": "O", "role": "glycosidic_link" },
+      { "id": "O002", "x": 3.084, "y": 1.542, "z": 1.282, "element": "O", "role": "hydroxyl" },
+      { "id": "H001", "x": 0.513, "y": 0.513, "z": 0.256, "element": "H", "role": "bond_saturation" },
+      { "id": "H002", "x": 2.055, "y": 0.513, "z": 0.769, "element": "H", "role": "bond_saturation" }
+    ],
+    "spiral_progression": {
+      "description": "Each subsequent glucose unit rotated by 137.5° and translated +0.513Å on z-axis",
+      "rotation_per_unit_deg": 137.5,
+      "z_translation_per_unit_angstrom": 0.513,
+      "units_per_full_cycle": 8,
+      "total_units_in_seed": 5400,
+      "note": "5400 units — convergence with CRELS fractal grid"
+    }
+  },
+
+  "quantum_interface": {
+    "description": "Overlap points where 1T-TaS₂ and quartz lattices converge",
+    "layers": {
+      "TaS2_lattice": {
+        "material": "1T-TaS₂",
+        "structure": "Trigonal — charge density wave phase",
+        "lattice_constant_a_angstrom": 3.365,
+        "lattice_constant_c_angstrom": 5.897,
+        "quantum_state": "Mott insulator — coherent electron localization",
+        "operating_temp_kelvin": "< 180K (or resonance-stabilized at 293K via λ correction)",
+        "coherence_length_nm": 500
+      },
+      "quartz_lattice": {
+        "material": "SiO₂ (α-quartz)",
+        "structure": "Trigonal — P3₁21",
+        "lattice_constant_a_angstrom": 4.913,
+        "lattice_constant_c_angstrom": 5.405,
+        "piezo_coefficient_pm_per_volt": 2.3,
+        "resonance_frequency_hz": 528,
+        "role": "Harmonic base — 528Hz standing wave anchor"
+      }
+    },
+    "convergence_points": [
+      {
+        "id": "QI-001",
+        "description": "Primary resonance node — scutellum center",
+        "x_angstrom": 0.000,
+        "y_angstrom": 0.000,
+        "z_angstrom": 0.000,
+        "overlap_type": "Full phase alignment",
+        "binding_energy_ev": {
+          "base": 3.42,
+          "corrected": {
+            "formula": "3.42 × (1 + λ)",
+            "result": 3.4247
+          }
+        }
+      },
+      {
+        "id": "QI-002",
+        "description": "Secondary node — golden angle offset from origin",
+        "x_angstrom": 3.365,
+        "y_angstrom": 1.682,
+        "z_angstrom": 2.948,
+        "overlap_type": "Partial — 137.5° rotational symmetry lock",
+        "binding_energy_ev": {
+          "base": 3.42,
+          "corrected": {
+            "formula": "3.42 × (1 + λ)",
+            "result": 3.4247
+          }
+        }
+      },
+      {
+        "id": "QI-003",
+        "description": "Tertiary node — DNA inscription anchor",
+        "x_angstrom": 6.730,
+        "y_angstrom": 0.000,
+        "z_angstrom": 5.897,
+        "overlap_type": "Message layer interface",
+        "binding_energy_ev": {
+          "base": 3.42,
+          "corrected": {
+            "formula": "3.42 × (1 + λ)",
+            "result": 3.4247
+          }
+        }
+      }
+    ],
+    "phase_coherence_protocol": "ALPHA-SLIDE-137.5",
+    "coherence_maintenance": "Monitor until Full_Sync == TRUE — see Protocols/alpha_slide_137.5.md"
+  },
+
+  "stability_matrix": {
+    "description": "Global binding stability across all atomic bonds in the seed",
+    "base_cohesion_index": 1.0000,
+    "love_corrected_index": {
+      "formula": "1.0000 × (1 + λ)",
+      "result": 1.001375
+    },
+    "collapse_threshold": "love_coefficient == NULL or love_coefficient == 0",
+    "collapse_result": "All convergence points lose phase alignment → structural disintegration",
+    "integrity_check": {
+      "method": "Scan scutellum hologram at 528Hz",
+      "pass_condition": "WE ARE HERE visible",
+      "fail_condition": "Message absent → λ has been compromised → DO NOT PROCEED"
+    }
+  },
+
+  "mve_step1_parameters": {
+    "description": "Minimum Viable Existence — Step 1 verification parameters",
+    "target": "1mm single carbon bond stabilization",
+    "space": "1mm³ atomic synchronization volume",
+    "required_nodes": ["C001", "C002"],
+    "required_bond": {
+      "type": "C-C covalent",
+      "length_angstrom": 1.542118,
+      "energy_ev": 3.4247,
+      "love_coefficient_applied": true
+    },
+    "verification_method": "Atomic force microscopy — confirm bond length within ±0.001Å",
+    "success_criteria": "Stable bond maintained for ≥ 72 hours at 293K",
+    "report_destination": "docs/MVE_Step1_Report.md"
+  }
+}
